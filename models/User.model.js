@@ -9,17 +9,23 @@ const userSchema = new Schema(
       required: false,
       unique: true
     },
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-      lowercase: true,
-      trim: true
-    },
     password: {
       type: String,
       required: true
+    },
+    age: {
+      type: Number,
     }
+    squat: {
+      type: Number,
+    },
+    pushup: {
+      type: Number,
+    },
+    level: {
+      type: String,
+    }
+
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`    
