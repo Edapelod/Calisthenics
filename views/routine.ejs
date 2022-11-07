@@ -1,0 +1,15 @@
+<h1>Routine</h1>
+<% if(userConnected) { %>
+    <h2>Here is your routine, <%= userConnected.username %>!</h2>
+    <p>According to the info you have given us, this is your "level"</p>
+    <p>text</p>
+
+  <% } else { %>
+    
+    <br><p>Still no logged in user, sorry!</p>
+  
+  <% } %>
+
+  <form method="POST" action="/routine">
+    <button>Edit</button>
+  </form>
