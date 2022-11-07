@@ -1,23 +1,39 @@
 <section>
   <% if(userConnected) { %>
-    <h2>Welcome, <%= userConnected.username %>!</h2>
-    <p>This is your profile page.</p>
-    <p>We would like you to enter some information in the following form, so that we can give you a routine according to your experience level.</p>
+  <h2>Welcome, <%= userConnected.username %>!</h2>
+  <p>This is your profile page.</p>
+  <p>
+    We would like you to enter some information in the following form, so that
+    we can give you a routine according to your experience level.
+  </p>
 
   <% } else { %>
-    
-    <br><p>Still no logged in user, sorry!</p>
-  
+
+  <br />
+  <p>Still no logged in user, sorry!</p>
+
   <% } %>
   <h2>Your Strength</h2>
   <form method="POST" action="/profile">
-    <label>How old are you?<input type="text" placeholder="Your Age" name="age"></label>
-    <br>
-    <label>How many squats can you do?<input type="text" placeholder="Squat" name="squat"></label>
-    <br>
-    <label>How many push ups can you do?<input type="text" placeholder="Push ups" name="pushup"></label>
-    <br>
+    <label
+      >How old are you?<input type="text" placeholder="Your Age" name="age"
+    /></label>
+    <br />
+    <label
+      >How many squats can you do?<input
+        type="text"
+        placeholder="Squat"
+        name="squat"
+    /></label>
+    <br />
+    <label
+      >How many push ups can you do?<input
+        type="text"
+        placeholder="Push ups"
+        name="pushup"
+    /></label>
+    <br />
     <button type="submit">Get a Routine</button>
   </form>
 </section>
-
+<%- include('./partials/beginnerPartial.ejs') %>
