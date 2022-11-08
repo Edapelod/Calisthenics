@@ -1,9 +1,11 @@
+/* FIST SETUP  */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* LAYOUT DESIGN */
 body {
   margin: 0;
   padding: 0;
@@ -32,10 +34,10 @@ main {
 
 footer {
   background: linear-gradient(to right, #e9e4f0, #d3cce3);
-  padding: 1.5rem;
-  color: #c471ed;
+  padding: 1rem;
+  color: #12c2e9;
 }
-
+/* LAYOUT DESIGN FINISH LINE  */
 li {
   display: inline-block;
   padding: 0 30px;
@@ -46,18 +48,19 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  color: 15px;
-}
-
 p {
   text-align: center;
 }
 
+h2,
+p {
+  margin: 0.2rem;
+}
+
+/* ROUTINE TABLE DESIGN */
 table {
   padding: 10px;
   border-collapse: collapse;
-  /* margin: 25px 0; */
   margin: auto;
   font-size: 1.2rem;
   min-width: 550px;
@@ -83,15 +86,145 @@ table tr {
   border-bottom: 1px solid #ddd;
 }
 
-/* table tr:nth-of-type(even) {
-  background: linear-gradient(to right, #e9e4f0, #d3cce3);
-} */
-
 table tr {
   border-bottom: 2px solid #12c2e9;
 }
+/* TABLE DESIGN FINISH LINE  */
 
-h2,
-p {
-  margin: 0.2rem;
+/* SIGNUP PAGE DESIGN  */
+.signup-box {
+  min-width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  border-radius: 25px;
+}
+
+.signup-box h1 {
+  color: #12c2e9;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.signup-box input[type="text"],
+.signup-box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #12c2e9;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+.signup-box input[type="text"]:focus,
+.signup-box input[type="password"]:focus {
+  width: 280px;
+  border-color: #00008b;
+}
+
+.signup-box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #00008b;
+  padding: 14px 40px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.signup-box input[type="submit"]:hover {
+  background: #00008b;
+  font-size: 1.1rem;
+}
+/* SIGNUP PAGE DESIGN FINISH LINE  */
+
+/* LOGIN PAGE DESIGN  */
+.login-box {
+  min-width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  border-radius: 25px;
+}
+
+.login-box h1 {
+  color: #12c2e9;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #12c2e9;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+.login-box input[type="text"]:focus,
+.login-box input[type="password"]:focus {
+  width: 280px;
+  border-color: #00008b;
+}
+
+.login-box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #00008b;
+  padding: 14px 40px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+  background: #00008b;
+  font-size: 1.1rem;
+}
+/* SIGNUP PAGE DESIGN FINISH LINE  */
+
+/* PROFILE PAGE DESIGN  */
+
+.profile-box {
+  min-width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  border-radius: 25px;
 }
