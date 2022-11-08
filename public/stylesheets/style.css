@@ -10,34 +10,39 @@ body {
   display: grid;
   height: 100vh;
   grid-template-rows: auto 1fr auto;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px, Helvetica, Arial, sans-serif;
+  color: #00008b;
 }
 
 header {
-  background: lightpink;
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  padding: 1.5rem;
 }
 
 main {
-  background: coral;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
   text-align: center;
 }
 
 footer {
-  background: wheat;
-  padding: 2rem;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  padding: 1.5rem;
+  color: #c471ed;
 }
 
 li {
   display: inline-block;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 a {
-  color: #00b7ff;
+  color: #12c2e9;
   text-decoration: none;
 }
 
@@ -52,17 +57,21 @@ p {
 table {
   padding: 10px;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9rem;
-  min-width: 400px;
+  /* margin: 25px 0; */
+  margin: auto;
+  font-size: 1.2rem;
+  min-width: 550px;
+  min-height: 250px;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  text-align: left;
 }
 table thead tr {
-  background-color: #009879;
-  color: #fff;
+  background-color: #d3cce3;
+  color: #00008b;
   text-align: left;
+  font-size: 1.3rem;
 }
 
 table th,
@@ -74,10 +83,15 @@ table tr {
   border-bottom: 1px solid #ddd;
 }
 
-table tr:nth-of-type(even) {
-  background-color: #f3f3f3;
+/* table tr:nth-of-type(even) {
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+} */
+
+table tr {
+  border-bottom: 2px solid #12c2e9;
 }
 
-table tr:last-of-type {
-  border-bottom: 2px solid #009879;
+h2,
+p {
+  margin: 0.2rem;
 }
