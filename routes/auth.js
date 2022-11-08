@@ -1,14 +1,15 @@
 const router = require("express").Router();
-const { Router } = require("express");
 const User = require("../models/User.model.js");
 const bcrypt = require("bcryptjs");
+const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard.js');
+
 
 /* GET signup page */
-router.get("/signup", (req, res, next) => {
+router.get("/signup", isLoggedOut, (req, res, next) => {
   res.render("auth/signup");
 });
 
-router.post("/signup", async (req, res) => {
+router.post("/signup", isLoggedOut, async (req, res) => {
   try {
     const salt = bcrypt.genSaltSync(11);
     const passwordHash = bcrypt.hashSync(req.body.password, salt);
@@ -24,11 +25,11 @@ router.post("/signup", async (req, res) => {
 });
 
 /* GET login page */
-router.get("/login", (req, res, next) => {
+router.get("/login", isLoggedOut, (req, res, next) => {
   res.render("auth/login");
 });
 
-router.post("/login", async (req, res) => {
+router.post("/login", isLoggedOut, async (req, res) => {
   console.log("SESSION =====> ", req.session);
   try {
     const { username, password } = req.body;
@@ -49,7 +50,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-router.get("/logout", (req, res) => {
+router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       next(err);
