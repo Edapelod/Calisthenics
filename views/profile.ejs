@@ -16,19 +16,15 @@
   <h2>Your Strength</h2>
   <form method="POST" action="/profile">
     <label
-      >How old are you?<input type="text" placeholder="Your Age" name="age"
-    /></label>
-    <br />
-    <label
       >How many squats can you do?<input
-        type="text"
+        type="number"
         placeholder="Squat"
         name="squat"
     /></label>
     <br />
     <label
       >How many push ups can you do?<input
-        type="text"
+        type="number"
         placeholder="Push ups"
         name="pushup"
     /></label>
@@ -36,4 +32,3 @@
     <button type="submit">Get a Routine</button>
   </form>
 </section>
-<%- include('./partials/beginnerPartial.ejs') %>

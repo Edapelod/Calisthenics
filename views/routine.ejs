@@ -9,7 +9,17 @@
     <br><p>Still no logged in user, sorry!</p>
   
   <% } %>
+  
+  <% if (sum >= 20 && sum <30) { %>
+    <%- include('./partials/beginnerPartial.ejs') %>
+  <% } else if (sum >= 30 && sum <40) { %>
+    <%- include('./partials/intermediatePartial.ejs') %>
+  <% } else if (sum >= 40 && sum <60 ) { %>
+    <%- include('./partials/advancedPartial.ejs') %>
+  <% } else { %>
+    <%- include('./partials/expertPartial.ejs') %>
+  <% } %>
 
-  <form method="POST" action="/routine">
-    <button>Edit</button>
+  <form>
+    <button><a href="/profile">Edit</a></button>
   </form>

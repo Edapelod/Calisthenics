@@ -13,17 +13,11 @@ const userSchema = new Schema(
       type: String,
       required: true
     },
-    age: {
-      type: Number,
-    },
     squat: {
       type: Number,
     },
     pushup: {
       type: Number,
-    },
-    level: {
-      type: String,
     }
 
   },
