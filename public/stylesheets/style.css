@@ -1,11 +1,11 @@
-/* FIST SETUP  */
+/* FIST SETUP  ------------------------------------------------------------------------------------------------------*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* LAYOUT DESIGN */
+/* LAYOUT DESIGN --------------------------------------------------------------------------------------------------*/
 body {
   margin: 0;
   padding: 0;
@@ -37,27 +37,9 @@ footer {
   padding: 1rem;
   color: #12c2e9;
 }
-/* LAYOUT DESIGN FINISH LINE  */
-li {
-  display: inline-block;
-  padding: 0 30px;
-}
+/* LAYOUT DESIGN FINISH LINE  ---------------------------------------------------------------------------------------------------*/
 
-a {
-  color: #12c2e9;
-  text-decoration: none;
-}
-
-p {
-  text-align: center;
-}
-
-h2,
-p {
-  margin: 0.2rem;
-}
-
-/* ROUTINE TABLE DESIGN */
+/* ROUTINE TABLE DESIGN  -----------------------------------------------------------------------------------------------------------*/
 table {
   padding: 10px;
   border-collapse: collapse;
@@ -89,9 +71,9 @@ table tr {
 table tr {
   border-bottom: 2px solid #12c2e9;
 }
-/* TABLE DESIGN FINISH LINE  */
+/* TABLE DESIGN FINISH LINE  -----------------------------------------------------------------------------------------------*/
 
-/* SIGNUP PAGE DESIGN  */
+/* SIGNUP PAGE DESIGN  -----------------------------------------------------------------------------------------------------*/
 .signup-box {
   min-width: 300px;
   padding: 40px;
@@ -151,9 +133,9 @@ table tr {
   background: #00008b;
   font-size: 1.1rem;
 }
-/* SIGNUP PAGE DESIGN FINISH LINE  */
+/* SIGNUP PAGE DESIGN FINISH LINE  ---------------------------------------------------------------------------------------*/
 
-/* LOGIN PAGE DESIGN  */
+/* LOGIN PAGE DESIGN  ----------------------------------------------------------------------------------------------------*/
 .login-box {
   min-width: 300px;
   padding: 40px;
@@ -213,18 +195,114 @@ table tr {
   background: #00008b;
   font-size: 1.1rem;
 }
-/* SIGNUP PAGE DESIGN FINISH LINE  */
+/* SIGNUP PAGE DESIGN FINISH LINE  ---------------------------------------------------------------------------------------------*/
 
-/* PROFILE PAGE DESIGN  */
+/* PROFILE PAGE DESIGN  --------------------------------------------------------------------------------------------------------*/
+.profile-parent {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 14px;
+  grid-row-gap: 0px;
+}
 
-.profile-box {
-  min-width: 300px;
-  padding: 40px;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.profile-parent .box1 {
+  grid-area: 4 / 2 / 7 / 6;
+  border: solid 2px #fff;
+  padding: 20px;
   text-align: center;
   background: linear-gradient(to right, #e9e4f0, #d3cce3);
   border-radius: 25px;
+}
+.profile-parent .box2 {
+  grid-area: 4 / 6 / 7 / 8;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  border-radius: 25px;
+}
+
+.profile-box h2 {
+  color: #12c2e9;
+  font-weight: 500;
+}
+
+.profile-box input[type="number"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #12c2e9;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+}
+
+.profile-box input[type="number"]:focus {
+  width: 280px;
+  border-color: #00008b;
+}
+
+.profile-box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: 2px solid #00008b;
+  padding: 14px 20px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.profile-box input[type="submit"]:hover {
+  background: #00008b;
+}
+
+.profile-box .welcome {
+  font-size: 2rem;
+  padding: 0.2rem;
+}
+
+.profile-box .account-info {
+  font-size: 1.7rem;
+  text-decoration: underline;
+  padding: 0.2rem;
+}
+
+.profile-box .level {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+.profile-box .date-info {
+  font-size: 1.2rem;
+}
+
+/* PROFILE PAGE DESIGN FINISH LINE ----------------------------------------------------------------------------------------------  */
+
+li {
+  display: inline-block;
+  padding: 0 30px;
+}
+
+a {
+  color: #12c2e9;
+  text-decoration: none;
+}
+
+p {
+  text-align: center;
+}
+
+h2,
+p {
+  margin: 0.2rem;
 }
