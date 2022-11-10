@@ -2,7 +2,7 @@
 
 // require session
 const session = require("express-session");
-
+require('dotenv').config();
 // since we are going to USE this middleware in the app.js,
 // let's export it and have it receive a parameter
 const MongoStore = require("connect-mongo");
@@ -14,7 +14,7 @@ module.exports = (app) => {
   // required for the app when deployed to Heroku (in production)
   app.set("trust proxy", 1);
 
-  const MONGO_URI = "mongodb://127.0.0.1:27017/Calisthenics";
+  const MONGO_URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Calisthenics";
 
   // use session
   app.use(
