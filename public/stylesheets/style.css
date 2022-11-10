@@ -40,10 +40,39 @@ footer {
 /* LAYOUT DESIGN FINISH LINE  ---------------------------------------------------------------------------------------------------*/
 
 /* ROUTINE TABLE DESIGN  -----------------------------------------------------------------------------------------------------------*/
+.routine-box {
+  margin: auto;
+  margin-top: 5%;
+  width: 400px;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+.routine-box button {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  border: 2px solid #00008b;
+  padding: 10px 30px;
+  outline: none;
+  color: #12c2e9;
+  border-radius: 25px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.routine-box button:hover {
+  background: #00008b;
+}
+
 table {
   padding: 10px;
   border-collapse: collapse;
   margin: auto;
+  margin-top: 2%;
   font-size: 1.2rem;
   min-width: 550px;
   min-height: 250px;

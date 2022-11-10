@@ -3,12 +3,12 @@
     <h2 class="welcome">Welcome, <%= userConnected.username %></h2>
     <h2 class="account-info">Account Info</h2>
     <h2 class="date-info">Created at: <%= date3 %></h2>
-    <h2 class="date-info">Uptaded at: <%= userConnected.updatedAt %></h2>
-    <h2 class="level">Your Level: <%= level %> </h2>
+    <h2 class="date-info">Uptaded at: <%= goodUpdateDate %></h2>
+    <h2 class="level">Your Level: <%= level %></h2>
     <button><a href="/routine">Show my Routine</a></button>
   </div>
   <div class="profile-box box2">
-    <h2>Edit Your Level?</h2>
+    <h2><%= profileText %></h2>
     <form method="POST" action="/profile">
       <input type="number" name="squat" placeholder="Squats number at once?" />
 
@@ -18,7 +18,7 @@
         placeholder="Push ups number at once?"
       />
 
-      <input type="submit" name="" value=<%= profileButton %> />
+      <input type="submit" name="" value="<%= profileButton %>" />
     </form>
   </div>
 </section>

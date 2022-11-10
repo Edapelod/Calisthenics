@@ -1,14 +1,11 @@
-<% if(userConnected) { %>
-<h2>Here is your routine, <%= userConnected.username %>!</h2>
-<p>According to the info you have given us, this is your "level"</p>
-<p>text</p>
-
-<% } %> <% if (sum >= 1 && sum <30) { %> <%-
-include('./partials/beginnerPartial.ejs') %> <% } else if (sum >= 30 && sum <40)
-{ %> <%- include('./partials/intermediatePartial.ejs') %> <% } else if (sum >=
-40 && sum <60 ) { %> <%- include('./partials/advancedPartial.ejs') %> <% } else
-{ %> <%- include('./partials/expertPartial.ejs') %> <% } %>
-
-<form>
+<section class="routine-box">
+  <h2>Here is your routine, <%= userConnected.username %></h2>
   <button><a href="/profile">Go to Profile</a></button>
-</form>
+</section>
+
+<% if (sum >= 1 && sum <30) { %> <%- include('./partials/beginnerPartial.ejs')
+%> <% } else if (sum >= 30 && sum <40) { %> <%-
+include('./partials/intermediatePartial.ejs') %> <% } else if (sum >= 40 && sum
+<60 ) { %> <%- include('./partials/advancedPartial.ejs') %> <% } else if (sum >=
+60) { %> <%- include('./partials/expertPartial.ejs') %> <% } else { %> <%-
+include('./partials/noRoutine.ejs') %> <%} %>
