@@ -14,6 +14,9 @@ module.exports = (app) => {
   // required for the app when deployed to Heroku (in production)
   app.set("trust proxy", 1);
 
+  const MONGO_URI =
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Calisthenics";
+
   // use session
   app.use(
     session({
@@ -21,7 +24,7 @@ module.exports = (app) => {
       resave: true,
       saveUninitialized: false,
       store: MongoStore.create({
-        mongoUrl: "mongodb://localhost/Calisthenics",
+        mongoUrl: MONGO_URI,
       }),
       cookie: {
         sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
