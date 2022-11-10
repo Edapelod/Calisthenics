@@ -14,8 +14,7 @@ module.exports = (app) => {
   // required for the app when deployed to Heroku (in production)
   app.set("trust proxy", 1);
 
-  const MONGO_URI =
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Calisthenics";
+  const MONGO_URI = "mongodb://127.0.0.1:27017/Calisthenics";
 
   // use session
   app.use(
